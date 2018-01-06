@@ -1,0 +1,9 @@
+/node_modules
+/build
+/.temp
+app.log
+config/secrets.json
+deploy/config.env
+
+# Deploy deps
+wait-for-it.sh

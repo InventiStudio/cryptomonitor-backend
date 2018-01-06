@@ -1,0 +1,25 @@
+version: '2'
+services:
+  postgres:
+    container_name: postgres
+    image: "postgres:9.6.3"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASS}
+  web:
+    container_name: ${DEPLOY_NAME}
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - DEPLOY_PORT=${DEPLOY_PORT}
+        - RUN_PARAMS=${RUN_PARAMS}
+    image: ${DEPLOY_NAME}
+    ports:
+     - "${DEPLOY_PORT}:${DEPLOY_PORT}"
+    depends_on:
+      - postgres
+    environment:
+      PGHOST: postgres
+      PGUSER: postgres
+      PGPASSWORD: ${POSTGRES_PASS}

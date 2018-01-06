@@ -1,0 +1,13 @@
+{
+  "development": {
+    "port": "4000",
+    "origin": "*"
+  },
+  "test": {
+    "port": "5000"
+  },
+  "production": {
+    "port": "4000",
+    "origin": ""
+  }
+}

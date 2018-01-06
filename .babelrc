@@ -1,0 +1,24 @@
+{
+  "presets": ["es2015"],
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-async-to-generator",
+    "syntax-async-functions",
+    "add-module-exports",
+    ["@textpress/babel-plugin-root-import", [{
+      "rootPathSuffix": "src",
+      "rootPathPrefix": "@"
+    }, {
+      "rootPathSuffix": "test",
+      "rootPathPrefix": "#"
+    }, {
+      "rootPathSuffix": "data",
+      "rootPathPrefix": "%"
+    }]]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["babel-plugin-rewire"]
+    }
+  }
+}

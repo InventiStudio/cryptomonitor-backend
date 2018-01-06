@@ -1,0 +1,20 @@
+{
+  "development": {
+    "username": "postgres",
+    "database": "cryptomonitor_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "database": "cryptomonitor_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "database": "cryptomonitor_production",
+    "host": "postgres",
+    "dialect": "postgres"
+  }
+}

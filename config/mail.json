@@ -1,0 +1,14 @@
+{
+  "development": {
+    "mail": "",
+    "sandbox": true
+  },
+  "production": {
+    "mail": "",
+    "sandbox": false
+  },
+  "test": {
+    "mail": "",
+    "sandbox": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "development": {
+    "scheduler": false,
+    "scheduler_logger": true,
+    "sequelize_logger": false,
+    "koa_logger": true
+  },
+  "production": {
+    "scheduler": true,
+    "scheduler_logger": true,
+    "sequelize_logger": false,
+    "koa_logger": true
+  },
+  "test": {
+    "scheduler": false,
+    "scheduler_logger": false,
+    "sequelize_logger": false,
+    "koa_logger": false
+  }
+}
