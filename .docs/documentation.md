@@ -1,43 +1,8 @@
 ## Modules
 Module | Description
 ------ | -----------
-[utils/macros](#markdown-header-utilsmacros) | Macros that helps with sequelize queries
 [utils/slug](#markdown-header-utilsslug) | Simple function that generate slug
 [utils/validate](#markdown-header-utilsvalidate) | Validation utility
-
-## utils/macros
-Macros that helps with sequelize queries
-
-
-* [utils/macros](#markdown-header-utilsmacros)
-    * [.whereId(value)](#markdown-header-utilsmacroswhereidvalue-where) ⇒ Where
-    * [.where(value, [key])](#markdown-header-utilsmacroswherevalue-key-where) ⇒ Where
-
-### utils/macros.whereId(value) ⇒ Where
-**Kind**: static method of [utils/macros](#markdown-header-utilsmacros)  
-**Returns**: Where - Where query  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| value | * | Search id |
-
-**Example**  
-```js
-{ ...whereId(10) }
-```
-### utils/macros.where(value, [key]) ⇒ Where
-**Kind**: static method of [utils/macros](#markdown-header-utilsmacros)  
-**Returns**: Where - Where query  
-**Todo**
-
-- [ ] This should be rather: where(obj) {
-return { where: { [Object.keys(obj)[0]]: obj[Object.keys(obj[0])] } } }
-
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| value | * |  | Search value |
-| [key] | String | `id` | Search key |
 
 ## utils/slug
 Simple function that generate slug

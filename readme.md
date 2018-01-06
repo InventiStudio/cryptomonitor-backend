@@ -1,4 +1,4 @@
-# Koa Boilerplate
+# CryptoMonitor Backend
 **by [InventiStudio](https://inventi.studio)**
 
 #### Table of Contents
