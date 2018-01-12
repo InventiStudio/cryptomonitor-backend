@@ -1,0 +1,14 @@
+{
+  "development": {
+    "currencies_fetch_cron":         "every 1 minute",
+    "saved_currencies_values_limit": 96,
+    "crypto_currencies_list":        ["BTC", "ETH", "LTC", "BTG"],
+    "currencies_list":               ["USD", "EUR", "GBP", "PLN"]
+  },
+  "production": {
+  },
+  "test": {
+  }
+}
+
+

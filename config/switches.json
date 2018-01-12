@@ -1,6 +1,6 @@
 {
   "development": {
-    "scheduler": false,
+    "scheduler": true,
     "scheduler_logger": true,
     "sequelize_logger": false,
     "koa_logger": true

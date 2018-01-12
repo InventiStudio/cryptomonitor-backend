@@ -34,6 +34,7 @@
     "docs": "yarn docs:code && yarn docs:api"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "bcryptjs": "^2.4.3",
     "colors": "^1.1.2",
     "dotenv": "^4.0.0",
