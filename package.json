@@ -23,7 +23,7 @@
     "db:clean:test": "NODE_ENV=test babel-node ./node_modules/.bin/run-func tasks/db-clean.js cli",
     "db:clean:all": "yarn db:clean:dev && yarn db:clean:test && yarn db:clean:prod",
     "lint": "eslint src test",
-    "test": "NODE_ENV=test BABEL_ENV=test mocha",
+    "test": "NODE_ENV=test BABEL_ENV=test mocha $(find . -path './test/**' -name '*.js' -o -path './src/**' -name '*.spec.js')",
     "docker": "./deploy/docker.sh",
     "deploy": "./deploy/deploy.sh",
     "postinstall": "./deploy/deps.sh && yarn secret:config && yarn secret:deploy",
