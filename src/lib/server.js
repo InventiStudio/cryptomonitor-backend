@@ -1,4 +1,3 @@
-import '@/controllers'
 import path          from 'path'
 import Koa           from 'koa'
 import bodyParser    from 'koa-bodyparser'

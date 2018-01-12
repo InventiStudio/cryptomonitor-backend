@@ -4,12 +4,15 @@ import supertest from 'supertest'
 import chai from 'chai'
 import dirtyChai from 'dirty-chai'
 import chaiAsPromised from 'chai-as-promised'
-import '@/models/relations'
 import chaiSpies from 'chai-spies'
 import config from '@/lib/config'
 import server from '@/lib/server'
+import modules from '@/lib/modules'
 import db from '@/lib/db'
 import { clean } from '../tasks/db-clean'
+
+modules.loadControllers()
+modules.loadRelations()
 
 prepare((done) => {
   // called before loading of test cases

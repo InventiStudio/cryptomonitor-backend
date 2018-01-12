@@ -1,7 +1,7 @@
 import moment from 'moment'
 import bcrypt from 'bcryptjs'
-import User from '@/models/user'
-import Session from '@/models/session'
+import User from '@/modules/user/user.model'
+import Session from '@/modules/session/session.model'
 
 export async function createUser({ email, password }) {
   const hash = await bcrypt.hash(password, 10)

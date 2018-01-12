@@ -1,6 +1,5 @@
 import bcrypt from 'bcryptjs'
-import User from '@/models/user'
-import '@/models/relations'
+import User from '@/modules/user/user.model'
 
 export default {
   async seed() {

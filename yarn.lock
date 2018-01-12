@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@inventistudio/using-js@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@inventistudio/using-js/-/using-js-1.1.0.tgz#85a7f680484582a18e99cfc4e287911b1e716e6c"
+
 "@textpress/babel-plugin-root-import@^5.1.2":
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/@textpress/babel-plugin-root-import/-/babel-plugin-root-import-5.1.2.tgz#3085c3c1e356d925e983b5f8806c9f451ac10454"

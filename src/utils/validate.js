@@ -32,7 +32,7 @@ const presets = {
  * @typedef Wrapper
  * @chainable
  */
-function wrap(data) {
+function wrap(data, value) {
   /** @lends module:utils/validate~Wrapper */
   const wrapper = {
     /**
@@ -56,6 +56,12 @@ function wrap(data) {
     async otherwise(next) {
       await next()
     },
+    /**
+     * @desc Get passed data
+     */
+    value() {
+      return value
+    },
   }
   return wrapper
 }
@@ -69,7 +75,7 @@ function wrap(data) {
  * @desc It runs validation
  */
 function run(data, schema, options) {
-  return wrap(validate({ type: 'object', properties: schema }, data, options))
+  return wrap(validate({ type: 'object', properties: schema }, data, options), data)
 }
 
 /**

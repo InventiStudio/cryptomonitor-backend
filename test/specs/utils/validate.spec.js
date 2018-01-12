@@ -39,6 +39,7 @@ describe('utils/validate', () => {
       'throwIfInvalid',
       'get',
       'otherwise',
+      'value',
     ])
   })
 

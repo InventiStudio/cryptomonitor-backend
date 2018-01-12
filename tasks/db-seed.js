@@ -1,8 +1,11 @@
-import fs     from 'fs'
-import path   from 'path'
-import db     from '@/lib/db'
-import logger from '@/lib/logger'
-import config from '../.sequelizerc'
+import fs      from 'fs'
+import path    from 'path'
+import db      from '@/lib/db'
+import logger  from '@/lib/logger'
+import modules from '@/lib/modules'
+import config  from '../.sequelizerc'
+
+modules.loadRelations()
 
 const log = string => logger(`Seed ${string}`, {
   icon:  'corn',

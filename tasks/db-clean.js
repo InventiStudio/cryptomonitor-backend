@@ -1,9 +1,9 @@
 import db from '@/lib/db'
 import logger from '@/lib/logger'
-import Session from '@/models/session'
-import User from '@/models/user'
-import Content from '@/models/content'
-import Language from '@/models/language'
+import Session from '@/modules/session/session.model'
+import User from '@/modules/user/user.model'
+import Content from '@/modules/content/content.model'
+import Language from '@/modules/language/language.model'
 
 const sequence = [
   Content,

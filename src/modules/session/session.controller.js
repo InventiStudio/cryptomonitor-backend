@@ -2,9 +2,10 @@ import bcrypt from 'bcryptjs'
 import moment from 'moment'
 import router from '@/lib/router'
 import error from '@/lib/error'
-import Session from '@/models/session'
-import User from '@/models/user'
+import Session from '@/modules/session/session.model'
+import User from '@/modules/user/user.model'
 import validate from '@/utils/validate'
+import using from '@inventistudio/using-js'
 
 export default router.controller('/sessions', (ctrl) => {
   ctrl
@@ -39,12 +40,12 @@ export default router.controller('/sessions', (ctrl) => {
      * @api {post} /sessions/ POST Session
      */
     .post('/', async (ctx, next) => {
-      const { body } = ctx.request
-      validate
-        .run(body, { password: { type: 'string', minLength: 6, optional: true } })
-        .throwIfInvalid()
-      User.sanitize(body)
-      User.validate(body).throwIfInvalid()
+      const passwordValidation = { password: { type: 'string', minLength: 6, optional: true } }
+      const body = using(ctx.request.body)
+        .do(b => validate.run(b, passwordValidation).throwIfInvalid().value())
+        .do(User.sanitize)
+        .do(b => User.validate(b).throwIfInvalid().value())
+        .value()
       const user = await User
         .findOne({ where: { email: body.email } })
         .throwIfNotFound('UnauthorizedError')

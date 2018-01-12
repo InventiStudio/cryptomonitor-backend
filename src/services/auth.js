@@ -1,6 +1,6 @@
 import moment from 'moment'
 import error from '@/lib/error'
-import Session from '@/models/session'
+import Session from '@/modules/session/session.model'
 
 /*
  * TODO BOILER: Auth should be done a bit different. We have a couple of cases we have to address:

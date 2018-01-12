@@ -1,6 +1,6 @@
 import router from '@/lib/router'
-import Language from '@/models/language'
-import Contents from '@/models/content'
+import Language from '@/modules/language/language.model'
+import Contents from '@/modules/content/content.model'
 
 export default router.controller('/languages', (ctrl) => {
   ctrl
