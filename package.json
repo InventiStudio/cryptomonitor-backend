@@ -30,7 +30,7 @@
     "secret:config": "test ! -f 'config/secrets.json' && cp config/secrets.json.template config/secrets.json || echo 'Secrets exists.'",
     "secret:deploy": "test ! -f 'deploy/config.env' && cp deploy/config.env.template deploy/config.env || echo 'Deploy config exists.'",
     "docs:code": "jsdoc2md --plugin dmd-bitbucket --configure .jsdoc src/**/*.js > .docs/documentation.md",
-    "docs:api": "apidoc -i src/controllers/ -o .temp/ && apidoc-markdown2 -p .temp/ -o .docs/endpoints.md && rm -rf .temp",
+    "docs:api": "apidoc -i src/modules/ -o .temp/ && apidoc-markdown2 -p .temp/ -o .docs/endpoints.md && rm -rf .temp",
     "docs": "yarn docs:code && yarn docs:api"
   },
   "dependencies": {
