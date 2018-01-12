@@ -39,6 +39,7 @@ import validate from '@/utils/validate'
             * [.throwIfInvalid([name])](#markdown-header-wrapperthrowifinvalidname-wrapper) ⇒ Wrapper
             * [.get()](#markdown-header-wrapperget-object) ⇒ Object
             * [.otherwise()](#markdown-header-wrapperotherwise)
+            * [.value()](#markdown-header-wrappervalue)
 
 ### utils/validate.run(data, schema, [options]) ⇒ [Wrapper](#markdown-header-utilsvalidatewrapper)
 It runs validation
@@ -69,6 +70,7 @@ Runs validation
     * [.throwIfInvalid([name])](#markdown-header-wrapperthrowifinvalidname-wrapper) ⇒ Wrapper
     * [.get()](#markdown-header-wrapperget-object) ⇒ Object
     * [.otherwise()](#markdown-header-wrapperotherwise)
+    * [.value()](#markdown-header-wrappervalue)
 
 #### Wrapper.throwIfInvalid([name]) ⇒ Wrapper
 **Kind**: static method of Wrapper  
@@ -83,5 +85,9 @@ Runs validation
 **Returns**: Object - Error data  
 #### Wrapper.otherwise()
 Let's you call next if no errors
+
+**Kind**: static method of Wrapper  
+#### Wrapper.value()
+Get passed data
 
 **Kind**: static method of Wrapper  

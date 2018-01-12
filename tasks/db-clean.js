@@ -2,12 +2,10 @@ import db from '@/lib/db'
 import logger from '@/lib/logger'
 import Session from '@/modules/session/session.model'
 import User from '@/modules/user/user.model'
-import Content from '@/modules/content/content.model'
-import Language from '@/modules/language/language.model'
+import Currency from '@/modules/currency/currency.model'
 
 const sequence = [
-  Content,
-  Language,
+  Currency,
   Session,
   User,
 ]
