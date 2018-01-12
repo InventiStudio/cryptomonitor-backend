@@ -50,6 +50,7 @@
     "koa-request-logger": "^1.2.0",
     "koa-response-time": "^2.0.0",
     "koa-router": "^7.2.1",
+    "koa-socket": "^4.4.0",
     "koa-static": "^4.0.1",
     "later": "^1.2.0",
     "lodash": "^4.17.4",

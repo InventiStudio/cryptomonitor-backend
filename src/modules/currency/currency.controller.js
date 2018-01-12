@@ -24,7 +24,7 @@ export default router.controller('/currencies', (ctrl) => {
      */
     .get('/:currency', async (ctx, next) => {
       const result = await Currency
-        .findAll({ where: { currency: ctx.params.currency } })
+        .findAll({ where: { currency: ctx.params.currency }, order: [['createdAt', 'DESC']] })
         .throwIfNotFound()
       ctx
         .render(result)
